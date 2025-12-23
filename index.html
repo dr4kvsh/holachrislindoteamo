@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HOLAHOLA AMORCITO DE MI VIDAAA</title>
+  <title>HOLA AMOOOORCITOOOOOOOO</title>
   <style>
     body {
       margin: 0;
@@ -40,7 +40,6 @@
       gap: 1.5rem;
       margin-bottom: 2rem;
       flex-wrap: wrap;
-      position: relative;
     }
 
     button {
@@ -50,7 +49,6 @@
       border-radius: 30px;
       cursor: pointer;
       transition: transform 0.2s, background 0.2s;
-      position: relative;
     }
 
     .yes {
@@ -66,7 +64,6 @@
     .no {
       background: #adb5bd;
       color: white;
-      position: absolute;
     }
 
     .result {
@@ -90,7 +87,6 @@
       position: fixed;
       width: 10px;
       height: 10px;
-      background-color: red;
       top: -10px;
       animation: fall linear forwards;
       z-index: 1;
@@ -106,39 +102,34 @@
 </head>
 <body>
   <div class="container">
-    <h1>MI CARIÑITOOOOOO,<br>¿te quieres casar conmigo? :3</h1>
+    <h1>cómo eres tan precioso...<br>¿te quieres casar conmigo? :3</h1>
 
-    <div class="buttons" id="buttons">
-      <button class="yes" onclick="sayYes()">SIIIIII</button>
-      <button class="no" id="noBtn">Nuh uh</button>
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">SIIIIIII</button>
+      <button class="no" onclick="sayNo()">Nuh uh</button>
     </div>
 
     <div id="yesResult" class="result">
-      <p>¡¡SÍIIII!! TE AMO AMOORRRR ERES MI VIDA ENTERA NIÑOLINDILLO</p>
+      <p>¡¡SÍIIII! SIII TE AMO AMORCITO LINDODODODO</p>
       <img src="si.gif" alt="Imagen feliz" />
     </div>
 
     <div id="noResult" class="result">
-      <p>QUÉ TE PASAAAA AMOORRR :((((</p>
-      <img src="no.gif" alt="Imagen graciosa" />
+      <p>QUÉ TE PASAAAA MOCOSO PULGOSO :(</p>
+      <img src="no.gif" alt="Imagen triste" />
     </div>
   </div>
 
   <script>
-    const noBtn = document.getElementById('noBtn');
-    const buttons = document.getElementById('buttons');
-
-    noBtn.addEventListener('mouseenter', () => {
-      const x = Math.random() * (buttons.offsetWidth - noBtn.offsetWidth);
-      const y = Math.random() * (buttons.offsetHeight - noBtn.offsetHeight);
-      noBtn.style.left = x + 'px';
-      noBtn.style.top = y + 'px';
-    });
-
     function sayYes() {
       document.getElementById('yesResult').style.display = 'block';
       document.getElementById('noResult').style.display = 'none';
       launchConfetti();
+    }
+
+    function sayNo() {
+      document.getElementById('noResult').style.display = 'block';
+      document.getElementById('yesResult').style.display = 'none';
     }
 
     function launchConfetti() {
@@ -158,3 +149,4 @@
   </script>
 </body>
 </html>
+
